@@ -91,5 +91,15 @@ module.exports={
                 removeAttributeQuotes: true
             }
         }),
-    ]
+    ],
+    // webpack-dev-server
+    devtool: 'eval',
+    devServer: {
+        contentBase: __dirname + '/src', // 当前服务器监听的路径
+        hot: true,  // 热更新
+        port:8080,  // 定义端口号
+        host: 'localhost',
+        open:true,    // 是否自动打开浏览器
+        // openPage:''
+    }
 }
